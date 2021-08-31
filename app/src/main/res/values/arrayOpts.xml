@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="niveis_dificuldade">
+        <item >@string/Level1</item>
+        <item >@string/Level2</item>
+        <item >@string/Level3</item>
+        <item >@string/Level4</item>
+        <item >@string/Level5</item>
+        <item >@string/Level6</item>
+        <item >@string/Level7</item>
+        <item >@string/Level8</item>
+        <item >@string/Level9</item>
+        <item >@string/Level10</item>
+    </string-array>
+    
+    <string-array name="lista_tipo_tabuada">
+        <item >@string/MutiInteiros</item>
+        <item >@string/AdicaoNaturais</item>
+        <item >@string/AdicaoRelativos</item>
+        <item >@string/SubRelativos</item>
+        <item >@string/ExpNum</item>
+        <item >@string/MultRel</item>
+        <item >@string/ExpNumMultAd</item>
+        <item >@string/Divisao</item>
+
+    </string-array>
+
+    <string-array name="tipo_tabuada">
+        <item>@string/snat</item>
+        <item >@string/mult</item>
+        <item >@string/soma</item>
+        <item >@string/dif</item>
+        <item >@string/exp</item>
+        <item>@string/multrel</item>
+        <item>@string/expmultad</item>
+        <item>@string/divisao</item>
+    </string-array>
+    
+    
+    
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="TimeFontSize">30sp</dimen>
+    <dimen name="lblScoreFontSize">30sp</dimen>
+    <dimen name="txtScoreFontSize">25sp</dimen>
+    <dimen name="CorrectWrongFontSize">25sp</dimen>
+    <dimen name="BeginButtons">25sp</dimen>
+    <dimen name="Layoutmargin">5dp</dimen>
+    <dimen name="alert_dialog_title_size">20sp</dimen>
+    <dimen name="preference_text_size_small">15sp</dimen>
+    <dimen name="preference_text_size_medium">20sp</dimen>
+    <dimen name="alert_list_text_size">18sp</dimen>
+    <dimen name="edittext_size">20sp</dimen>
+    <dimen name="textBotaoResposta">35sp</dimen>
+    <dimen name="textPergunta">50sp</dimen>
+    <dimen name="ic_gplay">30dp</dimen>
+    <dimen name="textSizeListItem">16sp</dimen>
+    <dimen name="textSizeListItemSecondary">14sp</dimen>
+</resources>

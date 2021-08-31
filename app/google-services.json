@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "954480139119",
+    "firebase_url": "https://arithmetik-4977708.firebaseio.com",
+    "project_id": "arithmetik-4977708",
+    "storage_bucket": "arithmetik-4977708.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954480139119:android:febfafe8c2cec54f",
+        "android_client_info": {
+          "package_name": "com.example.rober.arithmetik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954480139119-042nfsr7utovedtnuoke8cr9g121rfh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rober.arithmetik",
+            "certificate_hash": "1b7f6b7b2132b99451e5eede3f3341830784de50"
+          }
+        },
+        {
+          "client_id": "954480139119-a99agkopg88f8p8fv4qedf29eu2lescl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbM4UCSCZ--JGM-QMpyZz4WGRmlUdePv4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954480139119-a99agkopg88f8p8fv4qedf29eu2lescl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

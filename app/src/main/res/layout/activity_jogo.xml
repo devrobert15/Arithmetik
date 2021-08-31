@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aritmetica.rober.arithmetik.Jogo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.3">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imgRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="right"
+                    android:paddingEnd="5dp"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:id="@+id/txtRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/primaryTextColor"
+                    android:text="10"
+                    android:textSize="@dimen/CorrectWrongFontSize" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="wrong"
+                    android:paddingEnd="5dp"
+                    android:src="@mipmap/wrong" />
+
+                <TextView
+                    android:id="@+id/txtWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="10"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/CorrectWrongFontSize" />
+
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/lblPontos"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/lblScoreFontSize" />
+
+            <TextView
+                android:id="@+id/txtScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/txtScoreFontSize" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:contentDescription="time"
+            android:src="@mipmap/ampulheta" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="@string/tempo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/TimeFontSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txtPergunta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="6x5"
+            android:textColor="@color/primaryTextColor"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/textPergunta" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <Button
+            android:id="@+id/btnR0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/Layoutmargin"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="(+10)"
+            android:textSize="@dimen/textBotaoResposta" />
+
+        <Button
+            android:id="@+id/btnR1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/Layoutmargin"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:scaleType="centerInside"
+            android:textSize="@dimen/textBotaoResposta" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <Button
+            android:id="@+id/btnR2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/Layoutmargin"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:scaleType="centerInside"
+            android:textSize="@dimen/textBotaoResposta" />
+
+        <Button
+            android:id="@+id/btnR3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/Layoutmargin"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:scaleType="centerInside"
+            android:textSize="@dimen/textBotaoResposta" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema da aplicação -->
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
+        <item name="android:statusBarColor">@color/secondaryDarkColor</item>
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:colorAccent">@color/primaryColor</item>
+        <item name="android:windowBackground">@mipmap/fundo_azul</item>
+        <item name="android:colorButtonNormal">@color/backgroundButtonColor</item>
+        <item name="android:buttonStyle">@style/buttonstyle</item>
+
+       <!-- aplica estilo ao texto principal da lista de preferencias-->
+        <item name="android:textAppearanceListItem">@style/myAppearanceListItem</item>
+
+        <!--aplica estilo ao texto secundário da lista de preferencias-->
+        <item name="android:textAppearanceListItemSecondary">@style/myAppearanceListItemSecondary</item>
+
+
+    </style>
+
+
+    <style name="buttonstyle" parent="@android:style/Widget.Material.Button">
+        <item name="android:textColor">@color/textButtonNormal</item>
+    </style>
+
+
+    <style name="myAppearanceListItem" >
+        <item name="android:textSize">@dimen/textSizeListItem</item>
+    </style>
+
+
+    <style name="myAppearanceListItemSecondary">
+        <item name="android:textSize">@dimen/textSizeListItemSecondary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enabled="true">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="som"
+        android:summary="@string/OpSom"
+        android:title="@string/OpSomTitle" />
+
+    <EditTextPreference
+        android:key="tempo"
+        android:summary="@string/OpTempo"
+        android:title="@string/OpTempoTitle"
+        android:defaultValue="20"
+        android:positiveButtonText="@string/PositiveButtonText"
+        android:negativeButtonText="@string/NegativeButtonText"/>
+
+    <ListPreference
+        android:defaultValue="10"
+        android:entries="@array/niveis_dificuldade"
+        android:entryValues="@array/niveis_dificuldade"
+        android:key="nivel_dificuldade"
+        android:negativeButtonText="@string/NegativeButtonText"
+        android:positiveButtonText="@string/PositiveButtonText"
+        android:summary="@string/OpNivel"
+        android:title="@string/OpNivelTitle"
+        android:textSize="20sp"/>
+
+    <ListPreference
+        android:defaultValue="x"
+        android:entries="@array/lista_tipo_tabuada"
+        android:entryValues="@array/tipo_tabuada"
+        android:key="tipo_tabuada"
+        android:negativeButtonText="@string/NegativeButtonText"
+        android:positiveButtonText="@string/PositiveButtonText"
+        android:summary="@string/OpOperacao"
+        android:title="@string/OpOperacaoTitle"
+        android:textSize="20sp"/>
+
+    <Preference
+        android:key="btnApagar"
+        android:summary="@string/OpApagar"
+        android:title="@string/OpApagarTitle"
+        android:textSize="20sp"/>
+
+    <Preference
+        android:key="btnDisconnectAccount"
+        android:summary="@string/OpDisconnectAccount"
+        android:title="@string/opDisconnectAccountTitle"
+        android:textSize="20sp"/>
+
+
+</PreferenceScreen>
