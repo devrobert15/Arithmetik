@@ -28,6 +28,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import java.io.File;
+import java.util.Objects;
 
 
 public class Entrada extends Activity implements
@@ -259,7 +260,7 @@ public class Entrada extends Activity implements
 
 
     public void onShowLeaderboardsRequested () {
-            Games.getLeaderboardsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getLeaderboardsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .getLeaderboardIntent(getString(R.string.leaderboard_best_score))
                     .addOnSuccessListener(new OnSuccessListener<Intent>() {
                         @Override
@@ -287,7 +288,7 @@ public class Entrada extends Activity implements
 
 
     public void onShowAchievementsRequested() {
-        Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+        Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                 .getAchievementsIntent()
                 .addOnSuccessListener(new OnSuccessListener<Intent>() {
                     @Override
@@ -299,7 +300,7 @@ public class Entrada extends Activity implements
 
     // Update leaderboards with the user's score.
     private void updateLeaderboards() {
-        Games.getLeaderboardsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+        Games.getLeaderboardsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .submitScore(getString(R.string.leaderboard_best_score), myPrefsFile.getInt("score", 0));
         myPrefsFile.edit().putBoolean("LeaderChanged", false).apply();
 
@@ -308,32 +309,32 @@ public class Entrada extends Activity implements
     private void unlockAchievements () {
         SharedPreferences.Editor edit = myPrefsFile.edit();
         if (myPrefsFile.getBoolean("Ac1Unlocked", Boolean.FALSE)) {
-            Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .unlock(getString(R.string.achievement_the_beginning));
             edit.putBoolean("Ac1Updated", Boolean.TRUE);
             edit.apply();
         }
 
         if (myPrefsFile.getBoolean("Ac2Unlocked", Boolean.FALSE)) {
-            Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .unlock(getString(R.string.achievement_dont_stop));
             edit.putBoolean("Ac2Updated", Boolean.TRUE);
             edit.apply();
         }
         if (myPrefsFile.getBoolean("Ac3Unlocked", Boolean.FALSE)) {
-            Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .unlock(getString(R.string.achievement_ten_in_each_option));
             edit.putBoolean("Ac3Updated", Boolean.TRUE);
             edit.apply();
         }
         if (myPrefsFile.getBoolean("Ac4Unlocked", Boolean.FALSE)) {
-            Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .unlock(getString(R.string.achievement_ten_in_a_row));
             edit.putBoolean("Ac4Updated", Boolean.TRUE);
             edit.apply();
         }
         if (myPrefsFile.getBoolean("Ac5Unlocked", Boolean.FALSE)) {
-            Games.getAchievementsClient(this, GoogleSignIn.getLastSignedInAccount(this))
+            Games.getAchievementsClient(this, Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
                     .unlock(getString(R.string.achievement_addicted));
             edit.putBoolean("Ac5Updated", Boolean.TRUE);
             edit.apply();

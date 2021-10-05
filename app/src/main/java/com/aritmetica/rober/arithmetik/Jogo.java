@@ -19,17 +19,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
 import com.aritmetica.roliveira.arithmetik.R;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,7 +95,6 @@ public class Jogo extends Activity {
 		this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
 	}
 
-
 	protected void onResume() {
     	super.onResume();
     	mpCerto = MediaPlayer.create(getApplicationContext(), R.raw.certa);
@@ -120,12 +115,11 @@ public class Jogo extends Activity {
 				cron.cancel();
 		}
 
-		escreveFicheiro();
-		//QuestionIO.writeToFile(getBaseContext(),NOME_FICHEIRO,lstErradas);
+		//escreveFicheiro();
+		QuestionIO.writeToFile(getBaseContext(),NOME_FICHEIRO,lstErradas);
 		mpCerto.release();
 	    mpErrado.release();
 	}
-
 
 	public void finish(){
 		SharedPreferences.Editor edit = prefs.edit();
@@ -134,10 +128,11 @@ public class Jogo extends Activity {
 		super.finish();
 	}
 
-
 	private void inicializarJogo() {
-		lstErradas=leFicheiro();
-		//lstErradas=QuestionIO.readFromFile(getBaseContext(),NOME_FICHEIRO);
+		//lstErradas=leFicheiro();
+		Toast.makeText(getBaseContext(),"vou ler",Toast.LENGTH_SHORT).show();
+		lstErradas=QuestionIO.readFromFile(getBaseContext(),NOME_FICHEIRO);
+		Toast.makeText(getBaseContext(),"já li",Toast.LENGTH_SHORT).show();
 		if (treinar){
 			numArray=lstErradas.size()-1;
 			txtTime.setVisibility(View.INVISIBLE);
@@ -303,8 +298,8 @@ public class Jogo extends Activity {
 		alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.AlertDialogTextSizeButtons));*/
 	}
 
-
-	private void escreveFicheiro(){
+// deprecated replaced by QuestionIO class
+	/*private void escreveFicheiro(){
 		BufferedWriter writer=null;
 		File file = getBaseContext().getFileStreamPath(NOME_FICHEIRO);
 		if (lstErradas.size()!=0){
@@ -331,9 +326,9 @@ public class Jogo extends Activity {
 
 			}
 		}
-	}
-
-	private ArrayList<Pergunta> leFicheiro(){
+	}*/
+// deprecated replaced by QuestionIO class
+	/*private ArrayList<Pergunta> leFicheiro(){
 		File file = getBaseContext().getFileStreamPath(NOME_FICHEIRO);
 		BufferedReader input=null;
 		ArrayList<Pergunta> perguntas= new ArrayList<>();
@@ -373,7 +368,7 @@ public class Jogo extends Activity {
 	    		}
 	       }
 	       return perguntas;
-	}
+	}*/
 
 	private class ButtonTouchListener implements View.OnTouchListener {
 		final int posicao;
@@ -447,7 +442,7 @@ public class Jogo extends Activity {
 					} else {
 						// resposta errada
 							btn[this.posicao].setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.backgroundButtonColorWrong));
-							btn[Integer.valueOf(rpCerta)].setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.backgroundButtonColorRight));
+							btn[Integer.parseInt(rpCerta)].setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.backgroundButtonColorRight));
 
 						if (som) mpErrado.start();
 						numErradas++;
