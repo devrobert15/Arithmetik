@@ -19,7 +19,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
@@ -130,9 +129,7 @@ public class Jogo extends Activity {
 
 	private void inicializarJogo() {
 		//lstErradas=leFicheiro();
-		Toast.makeText(getBaseContext(),"vou ler",Toast.LENGTH_SHORT).show();
 		lstErradas=QuestionIO.readFromFile(getBaseContext(),NOME_FICHEIRO);
-		Toast.makeText(getBaseContext(),"já li",Toast.LENGTH_SHORT).show();
 		if (treinar){
 			numArray=lstErradas.size()-1;
 			txtTime.setVisibility(View.INVISIBLE);

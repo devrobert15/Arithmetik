@@ -7,8 +7,8 @@
         <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
         <item name="android:textColorSecondary">@color/secondaryTextColor</item>
-        <item name="android:colorAccent">@color/primaryColor</item>
-        <item name="android:windowBackground">@mipmap/fundo_azul</item>
+        <item name="android:colorAccent">@color/InButtons</item>
+        <item name="android:windowBackground">@mipmap/fundo_castanho</item>
         <item name="android:colorButtonNormal">@color/backgroundButtonColor</item>
         <item name="android:buttonStyle">@style/buttonstyle</item>
 

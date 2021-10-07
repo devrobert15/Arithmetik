@@ -5,15 +5,16 @@
   <color name="backgroundButtonColor">@color/primaryColor</color>
   <color name="backgroundButtonColorWrong">#bc0010</color>
   <color name="backgroundButtonColorRight">#38bc17</color>
-  <color name="primaryColor">#1976d2</color>
+  <color name="primaryColor">#fbc02d</color>
   <color name="primaryLightColor">#63a4ff</color>
-  <color name="primaryDarkColor">#004ba0</color>
+  <color name="primaryDarkColor">#f9a825</color>
   <color name="secondaryColor">@color/primaryColor</color>
   <color name="secondaryLightColor">@color/primaryLightColor</color>
   <color name="secondaryDarkColor">@color/primaryDarkColor</color>
-  <color name="primaryTextColor">#1a237e</color>
-  <color name="secondaryTextColor">@color/primaryDarkColor</color>
+  <color name="primaryTextColor">#5e2600</color>
+  <color name="secondaryTextColor">@color/InButtons</color>
   <color name="textButtonNormal">@color/primaryTextColor</color>
+  <color name="InButtons">#ff5c00 </color>
 
 
 
