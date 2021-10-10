@@ -136,7 +136,7 @@ public class Entrada extends Activity implements
             case R.id.btnTreinar:
                 jogar.putExtra("treinar", Boolean.TRUE);
                 startActivity(jogar);
-                updateUI(true);
+                //updateUI(true);
                 break;
             case R.id.imgBtnRanking:
                 onShowLeaderboardsRequested();

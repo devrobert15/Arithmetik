@@ -27,7 +27,7 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.prefs);
-		getPreferenceManager().findPreference("nivel_dificuldade");
+		//getPreferenceManager().findPreference("nivel_dificuldade");
 
 		Preference tempo = findPreference("tempo");
 		screen = getPreferenceScreen();

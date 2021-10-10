@@ -14,7 +14,7 @@
   <color name="primaryTextColor">#5e2600</color>
   <color name="secondaryTextColor">@color/InButtons</color>
   <color name="textButtonNormal">@color/primaryTextColor</color>
-  <color name="InButtons">#ff5c00 </color>
+  <color name="InButtons">#ff842a </color>
 
 
 

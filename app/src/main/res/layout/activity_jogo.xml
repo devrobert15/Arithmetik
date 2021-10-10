@@ -118,7 +118,7 @@
             android:layout_weight="0.2"
             android:gravity="center"
             android:text="@string/tempo"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/TimeFontSize" />
 
