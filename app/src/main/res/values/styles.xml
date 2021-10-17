@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Tema da aplicação -->
-    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
-        <item name="android:statusBarColor">@color/secondaryDarkColor</item>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/InButtons</item>
         <item name="android:colorPrimary">@color/primaryColor</item>
         <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
