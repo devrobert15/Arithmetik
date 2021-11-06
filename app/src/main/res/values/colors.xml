@@ -15,6 +15,7 @@
   <color name="secondaryTextColor">@color/InButtons</color>
   <color name="textButtonNormal">@color/primaryTextColor</color>
   <color name="InButtons">#ff842a </color>
+  <color name="actionBarColor">#fbc02d</color>
 
 
 

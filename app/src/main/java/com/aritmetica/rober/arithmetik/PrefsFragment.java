@@ -17,7 +17,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import java.io.File;
 
 public class PrefsFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
-	private Preference pref, disconnectAcount;
+	private Preference pref, disconnectAccount;
 	private static PreferenceScreen screen;
 	private static File file;
 	private Boolean mconnect=false;
@@ -32,7 +32,7 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
 		Preference tempo = findPreference("tempo");
 		screen = getPreferenceScreen();
 		pref=getPreferenceManager().findPreference("btnApagar");
-		disconnectAcount=getPreferenceManager().findPreference("btnDisconnectAccount");
+		disconnectAccount=getPreferenceManager().findPreference("btnDisconnectAccount");
 		file=getActivity().getBaseContext().getFileStreamPath(Jogo.NOME_FICHEIRO);
 
 
@@ -51,7 +51,6 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
 							}
 
 							if (Integer.parseInt(newValue.toString()) < 0 || Integer.parseInt(newValue.toString()) > 60) {
-								Toast.makeText(getActivity().getBaseContext(), R.string.AlertTempo, Toast.LENGTH_LONG).show();
 								AlertDialog.Builder builder = new AlertDialog.Builder(
 										getActivity());
 								builder.setMessage(getActivity().getString(R.string.AlertTempo))
@@ -101,7 +100,7 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
 			}
 		});
 
-        /*disconnectAcount.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        /*disconnectAccount.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference arg0) {
                 private void revokeAccess() {
@@ -113,13 +112,10 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
                                 }
                             });
                 }
-                    PrefsFragment.screen.removePreference(disconnectAcount);
+                PrefsFragment.screen.removePreference(disconnectAccount);
                 return true;
             }
         });*/
-
-
-
 	}
 
 
@@ -138,12 +134,12 @@ public class PrefsFragment extends PreferenceFragment implements OnSharedPrefere
 			PrefsFragment.screen.removePreference(pref);
 		}
 		if (!mconnect){
-			PrefsFragment.screen.removePreference(disconnectAcount);
+			PrefsFragment.screen.removePreference(disconnectAccount);
 		}
 		getPreferenceScreen().getSharedPreferences()
         .registerOnSharedPreferenceChangeListener(this);
 		//a linha seguinte deve ser apagada para programar o revoke access
-        PrefsFragment.screen.removePreference(disconnectAcount);
+        PrefsFragment.screen.removePreference(disconnectAccount);
 	}
 	
 	public void onPause(){
